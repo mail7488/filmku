@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nonton Film & Anime Streaming</title>
+  <style>
+    body {
+      background-color: #0e0e0e;
+      color: #ffffff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #e50914;
+      margin-bottom: 30px;
+    }
+    .video-container {
+      max-width: 800px;
+      margin: 0 auto 30px auto;
+    }
+    video {
+      width: 100%;
+      border: 3px solid #e50914;
+      border-radius: 12px;
+    }
+    .film-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .film-card {
+      background-color: #1e1e1e;
+      padding: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .film-card:hover {
+      transform: scale(1.05);
+      background-color: #2a2a2a;
+    }
+    .film-card img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .film-card h3 {
+      margin-top: 10px;
+      font-size: 1rem;
+    }
+    .ads-btn {
+      display: inline-block;
+      background: #e50914;
+      color: #fff;
+      padding: 10px 18px;
+      margin-top: 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .ads-btn:hover {
+      background: #ff1e1e;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎬 Streaming Film & Anime Gratis</h1>
+
+  <div class="video-container">
+    <video id="videoPlayer" controls poster="https://archive.org/download/anime_thumb/anime_thumb.jpg">
+      <source id="videoSource" src="https://archive.org/download/sintel-2048-surround/sintel-2048-surround.mp4" type="video/mp4">
+      Maaf, browser Anda tidak mendukung pemutar video.
+    </video>
+    <br/>
+    <a href="https://www.profitableratecpm.com/e5crp5g1?key=0ce6a9913ddd1853baa539ccb4c9783f" target="_blank" class="ads-btn">
+      🎥 Klik di sini untuk versi full atau kualitas tinggi
+    </a>
+  </div>
+
+  <div class="film-list">
+    <div class="film-card" onclick="playStream('https://archive.org/download/sintel-2048-surround/sintel-2048-surround.mp4')">
+      <img src="https://archive.org/download/sintel-2048-surround/sintel-poster.jpg" alt="Sintel" />
+      <h3>Sintel</h3>
+    </div>
+    <div class="film-card" onclick="playStream('https://archive.org/download/BigBuckBunny_328/BigBuckBunny_512kb.mp4')">
+      <img src="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg" alt="Big Buck Bunny" />
+      <h3>Big Buck Bunny</h3>
+    </div>
+    <div class="film-card" onclick="playStream('https://archive.org/download/TearsOfSteel720pmp4/TearsOfSteel_720p.mp4')">
+      <img src="https://mango.blender.org/wp-content/uploads/2012/09/TOS_poster.jpg" alt="Tears of Steel" />
+      <h3>Tears of Steel</h3>
+    </div>
+    <div class="film-card" onclick="playStream('https://archive.org/download/ElephantsDream/ed_1024_512kb.mp4')">
+      <img src="https://orange.blender.org/wp-content/themes/orange/images/ed_header.jpg" alt="Elephants Dream" />
+      <h3>Elephants Dream</h3>
+    </div>
+  </div>
+
+  <script>
+    function playStream(videoUrl) {
+      const videoPlayer = document.getElementById('videoPlayer');
+      const videoSource = document.getElementById('videoSource');
+      videoSource.src = videoUrl;
+      videoPlayer.load();
+      videoPlayer.play();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
